@@ -14,11 +14,11 @@ RUN npm install -g nodemon --verbose
 # Work directory
 RUN mkdir \src
 WORKDIR \src
-ADD . \src
-RUN npm install
+ADD . .
+RUN npm install --verbose
 
 # Expose HTTP server
-EXPOSE 80
+#EXPOSE 80 # not supported in windows containers
 
 # Run app
 CMD ["nodemon", "\src\app.js"]
