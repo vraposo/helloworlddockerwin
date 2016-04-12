@@ -9,13 +9,13 @@ RUN powershell -Command \
     Remove-Item -Path patchiojs.exe
 
 # Install nodemon
-RUN npm install -g nodemon --verbose
+RUN npm install -g nodemon -d
 
 # Work directory
 RUN mkdir \src
 WORKDIR \src
 ADD . .
-RUN npm install --verbose
+RUN npm install -d
 
 # Expose HTTP server
 #EXPOSE 80 # not supported in windows containers
