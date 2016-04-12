@@ -9,7 +9,7 @@ RUN powershell -Command \
     Remove-Item -Path patchiojs.exe
 
 # Install nodemon
-RUN npm install -g nodemon -d
+# RUN npm install -g nodemon -d
 
 # Work directory
 RUN mkdir \src
@@ -21,4 +21,5 @@ RUN npm install -d
 #EXPOSE 80 # not supported in windows containers
 
 # Run app
-CMD ["nodemon", "\src\app.js"]
+# CMD ["nodemon", "\src\app.js"]
+CMD ["node", "\src\app.js"]
