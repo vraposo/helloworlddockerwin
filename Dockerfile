@@ -22,4 +22,4 @@ RUN npm install -d
 
 # Run app
 # CMD ["nodemon", "\src\app.js"]
-CMD "node \src\app.js"
+RUN node \src\app.js
